@@ -1,29 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>  
-        <link rel="stylesheet" href="style.css">
-    </head>
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Document</title>  
+    <link rel="stylesheet" href="style.css">  
+</head>  
 
-    <body>
-        <table>  
-            <tr class="main">  
-              <td colspan="3" id="row1"></td>  
-            </tr>  
-            <tr>  
-              <td><img class="image-1" src="images/1.jpg" alt="Image 1"> </td>  
-              <td><img class="image-2" src="images/2.jpg" alt="Image 2"></td> 
-              <td><img class="image-3" src="images/3.jpg" alt="Image 3"></td>  
-            </tr>
-          </table>
+<body>  
+    <table>  
+        <tr class="main">  
+            <td colspan="3" id="row1"></td>  
+        </tr>  
+        <tr>  
+            <td><img class="image-1" src="images/1.jpg" alt="Image 1" onclick="showImageInRow1(this)"></td>  
+            <td><img class="image-2" src="images/2.jpg" alt="Image 2" onclick="showImageInRow1(this)"></td>  
+            <td><img class="image-3" src="images/3.jpg" alt="Image 3" onclick="showImageInRow1(this)"></td>  
+        </tr>  
+    </table>  
 
-          <script>  
-            function showImageInRow1(clickedImage) {  
-                const row1 = document.getElementById('row1');  
-                row1.innerHTML = `<img src="${clickedImage.src}" alt="${clickedImage.alt}">`;  
-            }  
-        </script> 
-    </body>
+    <script>  
+        function showImageInRow1(clickedImage) {  
+            const row1 = document.getElementById('row1');  
+            row1.innerHTML = `<img src="${clickedImage.src}" alt="${clickedImage.alt}">`;  
+        }  
+    </script>  
+</body>  
 </html>
