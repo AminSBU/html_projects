@@ -1,33 +1,31 @@
-.container {
+html, body {  
+    height: 100%;  
+    margin: 0;  
+    display: flex; /* Using flexbox for centering */  
+    justify-content: center; /* Center horizontally */  
+    align-items: center; /* Center vertically */  
+    text-align: center;  
+}  
+
+.container {  
     max-width: 400px;  
-    margin: 0 auto;  
     padding: 20px;  
     border-radius: 5px;  
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+}  
 
-input[type="text"],
-input[type="password"],
-input[type="email"]
-{
-    border: 1px solid #ccc;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
+input[type="text"],  
+input[type="password"],  
+input[type="email"] {  
+    border: 1px solid #ccc;  
+    border-top: 0;  
+    border-left: 0;  
+    border-right: 0;  
+    margin-bottom: 20px;  
+    margin-top: 20px;  
+}  
 
-input:focus
-{
-    outline: none;
-    border-color: #4CAF50;
-}
-
-body
-{
-    text-align: center;
-    justify-content: center;
-    border-radius: 20px;
+input:focus {  
+    outline: none;  
+    border-color: #4CAF50;  
 }
