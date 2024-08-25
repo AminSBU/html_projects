@@ -7,12 +7,22 @@ html, body {
     text-align: center;  
 }  
 
-.container {  
+.table-structure {  
     max-width: 400px;  
     padding: 20px;  
     border-radius: 5px;  
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
-}  
+}
+
+.separator {  
+    width: 0.5px; /* عرض خط */  
+    background-color: rgb(175, 170, 170);
+}
+
+.image-register
+{
+    width: 300px;
+}
 
 input[type="text"],  
 input[type="password"],  
