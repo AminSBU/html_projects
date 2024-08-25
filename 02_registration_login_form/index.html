@@ -36,10 +36,7 @@
                 </div>
 
                 <div id="Login" class="tabcontent">
-                    <form id="login-form" action="/register" method="POST">  
-                        <div class="form-group">
-                            <input id="name-text" name="name" type="text" placeholder="Enter your name" required>  
-                        </div>  
+                    <form id="login-form" action="/register" method="POST">
                         <div class="form-group">
                             <input id="email-text" name="email" type="email" placeholder="Enter your email" required>  
                         </div>  
@@ -66,10 +63,6 @@
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].className = tablinks[i].className.replace(" active", "");
             }
-
-            // Set the default tab to "Register"
-            document.getElementById("Register").style.display = "block";
-            document.getElementsByClassName("tablinks")[0].className += " active";
 
             document.getElementById(cityName).style.display = "block";
             evt.currentTarget.className += " active";
