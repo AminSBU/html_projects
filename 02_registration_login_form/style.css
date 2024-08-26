@@ -109,3 +109,16 @@ input:focus {
   border: 1px solid #ccc;
   border-top: none;
 }
+
+.dropbtn:focus {
+  background-color: #8a8f94;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
