@@ -16,15 +16,22 @@
             <div class="container">
 
                 <div class="tab">
-                    <button class="tablinks" onclick="openCity(event, 'Register')">Register</button>
-                    <button class="tablinks" onclick="openCity(event, 'Login')">Login</button>
+                    <button class="tablinks" onclick="FormLoad(event, 'Register')">Register</button>
+                    <button class="tablinks" onclick="FormLoad(event, 'Login')">Login</button>
                 </div>
 
                 <div id="Register" class="tabcontent">
                     <form id="registration-form" action="/register" method="POST">  
                         <div class="form-group">
                             <input id="name-text" name="name" type="text" placeholder="Enter your name" required>  
-                        </div>  
+                        </div>
+                        <div class="dropdown">
+                            <select name="prof-list" id="prof-list">
+                                <option value="Python">Python</option>
+                                <option value="Java">Java</option>
+                                <option value="Js">Js</option>
+                            </select>    
+                        </div>
                         <div class="form-group">
                             <input id="email-text" name="email" type="email" placeholder="Enter your email" required>  
                         </div>  
@@ -51,9 +58,9 @@
     </table>
     <script>
         window.onload = function() {  
-            openCity(event, 'Register');  
+            FormLoad(event, 'Register');  
         } 
-        function openCity(evt, cityName) {
+        function FormLoad(evt, FormName) {
             var i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("tabcontent");
             for (i = 0; i < tabcontent.length; i++) {
@@ -64,8 +71,30 @@
                 tablinks[i].className = tablinks[i].className.replace(" active", "");
             }
 
-            document.getElementById(cityName).style.display = "block";
+            document.getElementById(FormName).style.display = "block";
             evt.currentTarget.className += " active";
+        }
+    </script>
+
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function MenuList() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
         }
     </script>
 </body>  
