@@ -7,6 +7,19 @@
     <title>Time Line</title>
 </head>
 <body>
-    
+    <progress id="progress-second" value="0" max="100"></progress>
 </body>
+
+<script>
+    let count = 0;  
+    function incrementCounter() {  
+      if (count <= 100) {  
+        document.getElementById("progress-second").value = count;  
+        count++;  
+      } else {  
+        count = 0;  
+      }  
+    }  
+    setInterval(incrementCounter, 1000);  
+</script>
 </html>
