@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,21 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">  
     <title>Time Line</title>
+    <style>
+        .progress-container {
+            width: 100%;
+            background-color: #ddd;
+        }
+
+        .progress-bar {
+            width: 0%;
+            height: 30px;
+            background-color: #4CAF50;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <progress id="progress-second" value="0" max="100"></progress>
-</body>
+    <div class="progress-container">  
+        <div class="progress-bar" id="progress-bar"></div>  
+    </div> 
 
-<script>
-    let count = 0;  
-    function incrementCounter() {  
-      if (count <= 100) {  
-        document.getElementById("progress-second").value = count;  
-        count++;  
-      } else {  
-        count = 0;  
-      }  
-    }  
-    setInterval(incrementCounter, 1000);  
-</script>
+    <script>
+        let count = 0;  
+        function incrementCounter() {  
+            if (count <= 100) {  
+                document.getElementById("progress-bar").style.width = count + "%";  
+                count++;  
+            } else {  
+                count = 0;  
+            }  
+        }  
+        setInterval(incrementCounter, 100);  
+    </script>
+</body>
 </html>
